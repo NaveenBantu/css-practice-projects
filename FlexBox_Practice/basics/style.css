@@ -1,0 +1,81 @@
+*{
+    /* box-sizing allows us to incluce the padding and border in an element's total width and height */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-container{
+    display: flex;
+    /* flex-direction: column; */
+    background-color:bisque;
+
+    /* always on the main axis */
+    /* justify-content: space-between; */
+    /* always on the cross axis */
+    /* align-items: start; */
+
+    /* flex wrap is used to wrap the contents if it does not fit in one row*/
+    /* flex-wrap: wrap; */
+}
+
+/* remove the float for other elements after flex container */
+/* .flex-container::after{
+    content: '';
+    clear: both;
+    display: block;
+} */
+
+.item{
+    /* the base width the item starts */
+    /* flex-basis: 100px; */
+    /* Rate of Growing the item dynamically */
+    /* flex-grow: 1; */
+    /* Rate of shrinking the item dynamically */
+    /* flex-shrink: 1; */
+
+    /* all the above 3 propeties can be merged into one property */
+    flex: 1 0 100px;
+    /* flex-grow flex-shrik flex-basis */
+
+    height: 100px;
+    background-color:blue;
+    color: #fff;
+    margin: 10px;
+
+    /* before flexbox */
+    /* float:left */
+
+    /* In order to center the text or other content we use the item as the flex container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item:nth-of-type(1){
+    /* align-self: start */
+    /* order: 2; */
+
+    /* Rate of Growing the item dynamically */
+    /* flex-grow: 1; */
+}
+
+.item:nth-of-type(2){
+    /* align-self: start */
+    /* order: 1; */
+    
+    /* Rate of Growing the item dynamically */
+    /* flex-grow: 2; */
+}
+
+.item:nth-of-type(3){
+    /* align-self: start */
+    /* order: 3; */
+
+    /* Rate of Growing the item dynamically */
+    /* flex-grow: 1; */
+}
